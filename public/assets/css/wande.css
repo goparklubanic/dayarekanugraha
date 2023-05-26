@@ -1,0 +1,107 @@
+.navbar-wande {
+    background-color: lightblue;
+}
+.app-brand>img{ width: 48px;}
+.app-brand>span{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 24pt;
+    vertical-align: middle;
+    margin-left: 15px;
+    font-weight: bold;
+}
+.wande-title{
+    padding: 25px;
+}
+
+.wande-title > span { vertical-align: bottom;}
+
+
+.wande-logo{
+    background-image: url('../images/wande-icon.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.wande-logo > img {
+    width: 100%;
+}
+
+.wande-section {
+    min-height: 25vh;
+    margin-top: 30px;
+}
+
+.wande-section-header{
+    text-align: center;
+    line-height: 75%;
+}
+
+.wande-section-header > h1 {
+    font-weight: bolder;
+}
+
+.wande-section-body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    gap: 20px;
+}
+.wande-card{    
+    background: linear-gradient(to bottom,rgba(255,255,255, 0.5),rgba(255,255,255,1)),url('../images/hexagon.png');
+    background-size: 12rem;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+.wande-card > img {
+    width: 8rem;
+    margin: 2rem;
+}
+
+.wande-card-outlet{    
+    background: linear-gradient(to bottom,rgba(255,255,255, 0.5),rgba(255,255,255,1));
+    border: none;
+}
+
+
+.wande-brand {
+    max-width: 320px ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.wande-brand img{
+    width: 100%;
+}
+
+.wande-about{
+    text-align: justify;
+    line-height: 25px;
+}
+.btn-wande {border-radius: 15px; padding-inline: 15px ;}
+.form-group input,
+.form-group textarea,
+.form-group select {
+    border: 1px solid #b8b8b8;
+    box-shadow: 2px 2px 5px #797979;
+}
+
+/* Admin Panel */
+.wdaParam{
+    min-width: 200px;
+}
+
+.wdaValue{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+footer{
+    padding-top: 15px;
+    background-color: rgb(27, 27, 27);
+    color: cornsilk;
+    font-size: 10pt;
+}
