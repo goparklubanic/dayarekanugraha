@@ -12,8 +12,8 @@ class WdadminController extends Controller
 {
     public function index(){
         $infoUmum  = wdgeneral::find(1);
-        $infoFitur = wdfeature::where('tampil','ya')->get();
-        $infoKedai = wdoutlet::where('tampil','ya')->get();
+        $infoFitur = wdfeature::all();
+        $infoKedai = wdoutlet::all();
         $infoKarir = wdcareer::all();
 
         return view('manager.index',[

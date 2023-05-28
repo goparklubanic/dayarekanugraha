@@ -13,6 +13,11 @@
       @include('components.admin-navbar')
     </div>
     <div class="container mt-3">
+      <div class="row">
+        <div class="col-lg-6 mx-auto">
+          @include('components.flash')
+        </div>
+      </div>
         @yield('konten')  
 
         @include('components.footer')

@@ -24,18 +24,22 @@ class WdoutletController extends Controller
     public function store(Request $request){
         // Wdgeneral::create($request->all());
         wdoutlet::create($request->all());
-        return redirect()->to('/Admin')->with('success','Informasi Fitur tersimpan');
+        return redirect()->to('/Admin')->with(['success'=>'Informasi kedai tersimpan']);
     }
     public function edit(Request $request){
-        $data = wdoutlet::where('id',$request->id);
+        $data = wdoutlet::find($request->id);
         return view('outlet.form',['mode'=>'update','data'=>$data]);
     }
     public function update(Request $request){
-        $data = wdoutlet::find($request->id)->update([
+        $data = wdoutlet::where('id',$request->id)->update([
             'jenisoutlet'=>$request->jenisoutlet,
             'iconUrl'=>$request->iconUrl,
             'tampil'=>$request->tampil
         ]);
+        return redirect()->to('/Admin')->with(['info'=>'Informasi kedai terupdate']);
     }
-    public function destroy(){}
+    public function destroy(Request $request){
+        wdoutlet::where('id',$request->id)->remove();
+        return redirect()->to('/Admin')->with(['warning'=>'Informasi kedai terhapus']);
+    }
 }

@@ -7,18 +7,18 @@
         @if ($mode == 'append' )
             <form action="{{ url('Admin/kedai/store') }}" method="post" class='p-3'>
         @else
-            <form action="{{ url('Admin/kedai/update',$data['id']) }}" method="post" class='p-3'>
+            <form action="{{ url('Admin/kedai/update') }}" method="post" class='p-3'>
             @method('PUT')
         @endif
             @csrf
-            <input type="hidden" name="id" value="{{ $data['id'] == NULL ? NULL : $data['id']}}">
+            <input type="hidden" name="id" value="{{ $data->id == NULL ? NULL : $data->id}}">
             <div class="form-group mb-3">
                 <label for="jenisoutlet">Jenis Kedai</label>
-                <input type="text" name="jenisoutlet" id="jenisoutlet" class="form-control" value="{{ $data['jenisoutlet'] }}">
+                <input type="text" name="jenisoutlet" id="jenisoutlet" class="form-control" value="{{ $data->jenisoutlet }}">
             </div>
             <div class="form-group mb-3">
                 <label for="iconUrl">URL Icon</label>
-                <input type="text" name="iconUrl" id="iconUrl" class="form-control" value="{{ $data['iconUrl'] }}">
+                <input type="text" name="iconUrl" id="iconUrl" class="form-control" value="{{ $data->iconUrl }}">
             </div>
             <div class="form-group mb-3">
                 <label for="tampil">Tampil</label>

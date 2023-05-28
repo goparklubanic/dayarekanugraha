@@ -27,7 +27,7 @@ class WdfeatureController extends Controller
         return redirect()->to('/Admin')->with('success','Informasi Fitur tersimpan');
     }
     public function edit(Request $request){
-        $data = wdfeature::where('id',$request->id);
+        $data = wdfeature::find($request->id);
         return view('fitur.form',['mode'=>'update','data'=>$data]);
     }
     public function update(Request $request){
@@ -36,6 +36,10 @@ class WdfeatureController extends Controller
             'iconUrl'=>$request->iconUrl,
             'tampil'=>$request->tampil
         ]);
+        return redirect()->to('/Admin')->with(['success'=>'Fitur berhasil diupdate']);
     }
-    public function destroy(){}
+    public function destroy(Request $request){
+        wdfeature::where('id',$request->id)->delete();
+        return redirect()->to('/Admin')->with(['info'=>'Fitur telah dihapus']);
+    }
 }

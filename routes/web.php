@@ -37,6 +37,7 @@ Route::get('/Admin/fitur/formtbh', [WdfeatureController::class,'create']);
 Route::post('/Admin/fitur/store', [WdfeatureController::class,'store']);
 Route::get('/Admin/fitur/formupd/{id}', [WdfeatureController::class,'edit']);
 Route::put('/Admin/fitur/update', [WdfeatureController::class,'update']);
+Route::delete('/Admin/fitur/remove', [WdfeatureController::class,'destroy']);
 
 // Manajemen Outlet
 Route::get('/Admin/kedai/formtbh', [WdoutletController::class,'create']);

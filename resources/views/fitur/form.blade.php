@@ -7,7 +7,7 @@
         @if ($mode == 'append' )
             <form action="{{ url('Admin/fitur/store') }}" method="post" class='p-3'>
         @else
-            <form action="{{ url('Admin/fitur/update',$data['id']) }}" method="post" class='p-3'>
+            <form action="{{ url('Admin/fitur/update') }}" method="post" class='p-3'>
             @method('PUT')
         @endif
             @csrf

@@ -1,4 +1,4 @@
-<footer>
+<footer class="mt-5">
     <div class="row">
         <div class="col text-center px-3">
             <img src="{{ asset('assets/images/wande-icon.png') }}" alt="awan kedai" style="width:80px;">

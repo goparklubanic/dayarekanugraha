@@ -44,7 +44,7 @@ $(document).ready( function(){
         $("#wdcareers div").remove();
         $.each(data.karir, function(i,data){
             $("#wdcareers").append(`
-                <div class="card mb-3 col-lg-6 col-md-6">
+                <div class="card mb-3 col-lg-6 col-md-6 border-0">
                     <div class="row g-0 mb-5">
                         <div class="col-md-4">
                             <img src="${data.iconurl}" class="img-fluid rounded-start" alt="customer service">

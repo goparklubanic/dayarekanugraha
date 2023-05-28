@@ -7,7 +7,7 @@
         @if ($mode == 'append' )
             <form action="{{ url('Admin/karir/store') }}" method="post" class='p-3'>
         @else
-            <form action="{{ url('Admin/karir/update',$data['id']) }}" method="post" class='p-3'>
+            <form action="{{ url('Admin/karir/update') }}" method="post" class='p-3'>
             @method('PUT')
         @endif
             @csrf

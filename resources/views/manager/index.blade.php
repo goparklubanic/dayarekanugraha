@@ -67,9 +67,14 @@
                                 <td>
                                     {{ $fitur->tampil }}
                                 </td>
-                                <td>
-                                    <a href="#" class="btn btn-sm btn-warning btn-wande">Edit</a>
-                                    <a href="#" class="btn btn-sm btn-danger btn-wande">Hapus</a>
+                                <td class='d-flex justify-content-center'>
+                                    <a href="{{ url('/Admin/fitur/formupd',$fitur->id) }}" class="btn btn-sm btn-warning btn-wande me-2">Edit</a>
+                                    <form action="{{ url('Admin/fitur/remove') }}" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    <input type="hidden" name="id" value="{{ $fitur->id }}">
+                                    <button type="submit" class="btn btn-sm btn-danger btn-wande">Hapus</button>
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach
@@ -106,9 +111,14 @@
                                 <td>
                                     {{ $kedai->tampil }}
                                 </td>
-                                <td>
-                                    <a href="#" class="btn btn-sm btn-warning btn-wande">Edit</a>
-                                    <a href="#" class="btn btn-sm btn-danger btn-wande">Hapus</a>
+                                <td class="d-flex justify-content-center">
+                                    <a href="{{ url('/Admin/kedai/formupd',$kedai->id) }}" class="btn btn-sm btn-warning btn-wande me-2">Edit</a>
+                                    <form action="{{ url('/Admin/kedai/remove') }}" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    <input type="hidden" name="id" value="{{ $kedai->id }}">
+                                    <button type="submit" class="btn btn-sm btn-danger btn-wande">Hapus</button>
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach
@@ -142,9 +152,15 @@
                                 <td>
                                     <img src="{{ $karir->iconurl }}" alt="{{ $karir->posisi }}" style="height:40px;">
                                 </td>
-                                <td>
-                                    <a href="#" class="btn btn-sm btn-warning btn-wande">Edit</a>
-                                    <a href="#" class="btn btn-sm btn-danger btn-wande">Hapus</a>
+                                <td class="d-flex justify-content-center">
+                                    <a href="{{ url('/Admin/karir/formupd',$karir->id) }}" class="btn btn-sm btn-warning btn-wande me-2">Edit</a>
+                                    <span>
+                                        <form action="{{ url('/Admin/karir/buang') }}" method="post">
+                                        @method('DELETE')
+                                        <input type="hidden" name="id" value="{{ $karir->id }}">
+                                        <button type="submit" class="btn btn-sm btn-danger btn-wande">Hapus</button>
+                                        </form>
+                                    </span>
                                 </td>
                             </tr>
                         @endforeach
