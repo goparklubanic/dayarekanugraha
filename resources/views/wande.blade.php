@@ -92,8 +92,8 @@
             <div class="wande-section-header">
                 <h1>Peluang Karir</h1>
             </div>
-            <div class="wande-section-body">
-                Bergabung bersama kami. Merintis dan mengembangkan karir di wande.co.id<br/>Tunjukkan kamu punya gagasan mencerdaskan dan mencerahkan orang-orang di sekitarmu! 
+            <div class="wande-section-body mb-3">
+                Bergabung bersama kami. Merintis dan mengembangkan karir di wande.co.id. Tunjukkan kamu punya gagasan mencerdaskan dan mencerahkan orang-orang di sekitarmu! 
             </div>
             <div class="wande-section-body">
                 <div class="row" id="wdcareers">                        

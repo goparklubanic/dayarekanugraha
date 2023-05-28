@@ -89,6 +89,15 @@
     box-shadow: 2px 2px 5px #797979;
 }
 
+.wande-text{
+    text-align: justify;
+    font-size: 10pt;
+}
+
+.wande-card-img{
+    width: 120px;
+}
+
 /* Admin Panel */
 .wdaParam{
     min-width: 200px;

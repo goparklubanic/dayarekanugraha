@@ -47,12 +47,12 @@ $(document).ready( function(){
                 <div class="card mb-3 col-lg-6 col-md-6 border-0">
                     <div class="row g-0 mb-5">
                         <div class="col-md-4">
-                            <img src="${data.iconurl}" class="img-fluid rounded-start" alt="customer service">
+                            <img src="${data.iconurl}" class="img-fluid rounded-start wande-card-img" alt="customer service">
                         </div>
                         <div class="col-md-8">
                         <div class="card-body">
                             <h5 class="card-title">${data.posisi}</h5>
-                            <p class="card-text">${data.deskripsi}</p>
+                            <p class="card-text wande-text">${data.deskripsi}</p>
                             <a href="#" class="btn btn-success btn-sm btn-wande">Apply!</a>
                         </div>
                         </div> 
